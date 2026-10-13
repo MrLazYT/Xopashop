@@ -1,0 +1,21 @@
+{$SITE_DOMAIN} {
+    encode zstd gzip
+
+    @hidden {
+        path /.env* /.git/* /data/* /server/* /scripts/*
+    }
+    respond @hidden 404
+
+    reverse_proxy app:8787
+
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        X-Frame-Options DENY
+    }
+
+    log {
+        output stdout
+        format console
+    }
+}

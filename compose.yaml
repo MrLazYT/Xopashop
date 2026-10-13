@@ -1,0 +1,74 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_TELEGRAM_SHOP_URL: ${VITE_TELEGRAM_SHOP_URL}
+        VITE_TELEGRAM_BOT_URL: ${VITE_TELEGRAM_BOT_URL}
+
+    container_name: xopashop-app
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    environment:
+      NODE_ENV: production
+      PORT: 8787
+
+    expose:
+      - "8787"
+
+    volumes:
+      - xopashop_data:/app/data
+      - xopashop_uploads:/app/uploads
+
+    networks:
+      - xopashop-network
+
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:8787/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+  caddy:
+    image: caddy:2
+    container_name: xopashop-proxy
+    restart: unless-stopped
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+    depends_on:
+      app:
+        condition: service_healthy
+
+    networks:
+      - xopashop-network
+
+volumes:
+  xopashop_data:
+  xopashop_uploads:
+  caddy_data:
+  caddy_config:
+
+networks:
+  xopashop-network:
+    driver: bridge

@@ -1,0 +1,155 @@
+{
+  "products": [
+    {
+      "id": "obsidian-crying",
+      "title": "Плакучий обсидіян",
+      "department": "products",
+      "price": 64,
+      "oldPrice": 80,
+      "unit": "діямантів",
+      "badge": "-20%",
+      "isNew": true,
+      "createdAt": "2026-10-11T00:50:00Z",
+      "description": "Плакучий обсидіян для будівництва та декору.",
+      "image": "",
+      "stock": 32,
+      "game": "Minecraft",
+      "details": [],
+      "clarifications": []
+    },
+    {
+      "id": "pvp-kit",
+      "title": "PVP набір «Хижак»",
+      "department": "pvp",
+      "price": 145,
+      "unit": "діямантів",
+      "badge": "HOT",
+      "isNew": true,
+      "createdAt": "2026-10-11T00:45:00Z",
+      "description": "Готовий набір для швидкого виходу в PVP.",
+      "image": "",
+      "stock": 8,
+      "game": "Minecraft",
+      "details": [],
+      "clarifications": []
+    },
+    {
+      "id": "visual-spawn",
+      "title": "Візуал спавну Premium",
+      "department": "visuals",
+      "price": 220,
+      "oldPrice": 260,
+      "unit": "діямантів",
+      "badge": "-15%",
+      "isNew": true,
+      "createdAt": "2026-10-10T20:00:00Z",
+      "description": "Готовий візуальний пакет для оформлення спавну.",
+      "image": "",
+      "stock": 12,
+      "game": "Minecraft",
+      "details": [],
+      "clarifications": []
+    },
+    {
+      "id": "resource-autumn",
+      "title": "Resource Pack Autumn 32x",
+      "department": "resource-packs",
+      "price": 90,
+      "unit": "діямантів",
+      "isNew": false,
+      "createdAt": "2026-10-08T20:00:00Z",
+      "description": "Осінній ресурс-пак у 32x.",
+      "image": "",
+      "stock": 99,
+      "game": "Minecraft",
+      "details": [],
+      "clarifications": []
+    },
+    {
+      "id": "giveaway-ticket",
+      "title": "Квиток у роздачу Xopa",
+      "department": "giveaways",
+      "price": 0,
+      "unit": "діямантів",
+      "badge": "FREE",
+      "isNew": false,
+      "createdAt": "2026-10-07T20:00:00Z",
+      "description": "Безкоштовна участь у поточній роздачі.",
+      "image": "",
+      "stock": 999,
+      "game": "Minecraft",
+      "details": [],
+      "clarifications": []
+    },
+    {
+      "id": "name-color",
+      "title": "85% з Кайо Періко",
+      "department": "other",
+      "price": 150,
+      "unit": "діямантів",
+      "isNew": false,
+      "createdAt": "2026-10-11T01:10:00Z",
+      "description": "Пропозиція XopaShop для GTA Online.",
+      "image": "",
+      "stock": 5,
+      "badge": "GTA V",
+      "game": "GTA Online",
+      "details": [],
+      "clarifications": []
+    },
+    {
+      "id": "contest-entry",
+      "title": "Участь у конкурсі Xopa Event",
+      "department": "other",
+      "price": 0,
+      "unit": "діямантів",
+      "badge": "EVENT",
+      "isNew": true,
+      "createdAt": "2026-10-10T21:30:00Z",
+      "description": "Спецподія або конкурс, не прив’язаний до Minecraft.",
+      "image": "",
+      "stock": 999,
+      "game": "XopaShop",
+      "details": [],
+      "clarifications": []
+    }
+  ],
+  "reviews": [],
+  "orders": [],
+  "about": [
+    {
+      "id": "a1",
+      "title": "XopaShop — магазин для гравців",
+      "text": "XopaShop створений як зручне місце для покупки внутрішньоігрових товарів, візуалів, ресурс-паків, PVP-наборів та участі у роздачах. Ми тримаємо каталог простим, ціни — зрозумілими, а зв'язок із магазином — прямим через Telegram.",
+      "image": ""
+    },
+    {
+      "id": "a2",
+      "title": "Як ми працюємо",
+      "text": "Нові пропозиції публікуються в Telegram і можуть автоматично з'являтися на сайті. Замовлення, заявки на викуп і участь у коробці тижня надходять адміну XopaShop, після чого покупець отримує підтвердження та код відстеження.",
+      "image": ""
+    }
+  ],
+  "users": [],
+  "sessions": [],
+  "hopamats": [
+    {
+      "id": "hop-riverro-center",
+      "name": "Хопамат №1 — Центр",
+      "territory": "Ріверро",
+      "address": "Центральна площа, торговий ряд",
+      "coords": "X 120, Y 65, Z -48",
+      "enabled": true,
+      "note": "Основний хопамат XopaShop."
+    },
+    {
+      "id": "hop-riverro-north",
+      "name": "Хопамат №2 — Північ",
+      "territory": "Ріверро",
+      "address": "Північний район, біля порталу",
+      "coords": "X -214, Y 71, Z 330",
+      "enabled": true,
+      "note": "Доступний для стандартних замовлень."
+    }
+  ]
+}
